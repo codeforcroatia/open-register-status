@@ -74,7 +74,7 @@
 <div class="{{divclass}}">
 <div class="record">
   <{{size}}>
-    <a href="" class="js-more-info" title="Klikni za informacije o {{title}}">{{id}}. {{title}}</a>
+    <a href="" class="js-more-info" title="Klikni za informacije o {{title}}">{{id}}. {{title}}</a>{{#owners}}&nbsp;<span class="label label-{{statuslabel}}">{{statustext}}</span>{{/owners}}
   </{{size}}>
 
   <div class="owners">
@@ -94,6 +94,13 @@
   </div>
   <div class="modal-body">
 <form action="https://docs.google.com/forms/d/14HZcFywwGXz60xtaW_RVOV_xURtfnTqlwLFky16jHsA/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
+<div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1258125421"><div class="ss-q-title">R.br.
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label></div>
+<p class="muted">Automatski ispunjeno</p></label>
+<input type="text" name="entry_1258125421" value="{{id}}" class="ss-q-short" id="entry_1258125421" dir="auto" aria-label="" aria-required="true" required="" title="">
+<div class="error-message" id="1597539825_errorMessage"></div>
 <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
 <label class="ss-q-item-label" for="entry_2050804129"><div class="ss-q-title">Naziv skupa podataka
@@ -171,33 +178,26 @@
   <strong>Još nitko nije preuzeo ovaj zadatak... <a href="" class="take-it-on" data-toggle="modal" data-target="#new-application-modal-{{id}}">Preuzmi ti!</a></strong>{{/owners}}
   </dd>
   <dt>
-    Detalji
-  </dt>
-  <dd>
-  {{{description}}}
-  </dd>
-  <dt>
     Vlasnik podataka
   </dt>
   <dd>
   {{place}}
   </dd>
+  {{#validipz}}
   <dt>
-    Zadatak
+    Status zahtjeva
   </dt>
   <dd>
-    {{workneeded}}
+    {{ipzstatustext}}&nbsp;<a href="{{ipzupdatelink}}" target="_blank">Ažuriraj status zahtjeva &raquo;</a>
   </dd>
   <dt>
-    Status
+    Datum zahtjeva
   </dt>
   <dd>
-    <span class="label label-{{statuslabel}}">{{statustext}}</span>&nbsp;
-    {{#owners}}
-    <a href="" class="btn btn-link take-it-on" data-toggle="modal" data-target="#update-status-modal-{{id}}">Ažuriraj status &raquo;</a>
-    {{/owners}}
-  {{^owners}}
-  &nbsp;{{/owners}}
+    {{requestdate}}
+    {{^iscompleted}}
+    &nbsp;<span class="label label-{{statuslabel}}">{{period}} dana</span>
+    {{/iscompleted}}
   </dd>
   <dt>
     Bilješke
@@ -205,6 +205,7 @@
   <dd>
     {{{notes}}}
   </dd>
+  {{/validipz}}
 </dl>
 </div>
 </div>
