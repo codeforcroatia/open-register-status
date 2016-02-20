@@ -1,5 +1,7 @@
 # Status otvaranja skupova podataka u RH
 
+[![Slack Status](http://slackin.codeforcroatia.org/badge.svg)](http://codeforcroatia.org/slackin)
+
 Status zahtjeva za pristup informacijama u cilju otvaranja skupova podataka od društvene važnosti u Republici Hrvatskoj
 
 Bazirano na [openspending/dataprogress](https://github.com/openspending/dataprogress), Google Forms integracija koristi [james2doyle/google-form-styling](https://github.com/james2doyle/google-form-styling) (MIT licenca)
