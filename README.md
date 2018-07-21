@@ -4,6 +4,8 @@
 
 Status zahtjeva za pristup informacijama u cilju otvaranja skupova podataka od društvene važnosti u Republici Hrvatskoj
 
+Ovaj projekt provođen je 2015/2016 godine: zahtjevi za otvaranje registara u sklopu ovog projekta slani su od 21.07.2015 do 15.5.2016.
+
 Bazirano na [openspending/dataprogress](https://github.com/openspending/dataprogress), Google Forms integracija koristi [james2doyle/google-form-styling](https://github.com/james2doyle/google-form-styling) (MIT licenca)
 
 #License
